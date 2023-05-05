@@ -26,4 +26,4 @@ jobs:
         with:
           context: "{{defaultContext}}:nextcloud-ffmpeg"
           push: true
-          tags: sldaniel/nextcloud-ffmpeg:latest
+          tags: sldaniel/nextcloud-ffmpeg:stable
