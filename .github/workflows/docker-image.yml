@@ -31,7 +31,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: "{{defaultContext}}:nextcloud-ffmpeg"
           push: true
           tags: sldaniel/nextcloud-ffmpeg:latest
         if: steps.check.outputs.needs-updating == 'true'
