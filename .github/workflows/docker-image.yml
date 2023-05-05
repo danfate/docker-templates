@@ -16,7 +16,7 @@ jobs:
         id: check
         uses: lucacome/docker-image-update-checker@v1
         with:
-          base-image: nextcloud:stable
+          base-image: library/nextcloud:stable
           image: sldaniel/nextcloud-ffmpeg:stable
       -
         name: Set up Docker Buildx
