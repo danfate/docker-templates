@@ -17,7 +17,7 @@ jobs:
         uses: lucacome/docker-image-update-checker@v1
         with:
           base-image: nextcloud:stable
-          image: sldaniel/nextcloud-ffmpeg:latest
+          image: sldaniel/nextcloud-ffmpeg:stable
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -34,5 +34,5 @@ jobs:
         with:
           context: "{{defaultContext}}:nextcloud-ffmpeg"
           push: true
-          tags: sldaniel/nextcloud-ffmpeg:latest
+          tags: sldaniel/nextcloud-ffmpeg:stable
         if: steps.check.outputs.needs-updating == 'true'
