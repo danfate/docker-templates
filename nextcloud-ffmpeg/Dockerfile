@@ -1,13 +1,14 @@
 FROM nextcloud:stable
 
 RUN apt-get update \
-    && apt-get install -y software-properties-common wget \
+    && apt-get install -y software-properties-common \
     # && echo "1111" \
     # && ls /etc/apt/ \
     # && apt-add-repository -y non-free \
     # && apt-add-repository -y non-free-firmware \
     # && echo "2222" \
-    && wget -P /etc/apt/ https://gist.githubusercontent.com/danfate/212207738a32338ba5d4fab18fc3b565/raw/8568bcf004a95322b079dd536f541e9fd0f8fb53/sources.list \
+    # && wget -P /etc/apt/ https://gist.githubusercontent.com/danfate/212207738a32338ba5d4fab18fc3b565/raw/8568bcf004a95322b079dd536f541e9fd0f8fb53/sources.list \
+    && curl -o /etc/apt/sources.list https://gist.githubusercontent.com/danfate/212207738a32338ba5d4fab18fc3b565/raw/8568bcf004a95322b079dd536f541e9fd0f8fb53/sources.list \
     && cat /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y ffmpeg intel-media-va-driver-non-free vainfo i965-va-driver \
