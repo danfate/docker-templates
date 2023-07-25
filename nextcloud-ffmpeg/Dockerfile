@@ -1,7 +1,7 @@
 FROM nextcloud:stable
 
 RUN apt-get update \
-    && apt-get install -y software-properties-common \
+    && apt-get install -y software-properties-common wget \
     # && echo "1111" \
     # && ls /etc/apt/ \
     # && apt-add-repository -y non-free \
